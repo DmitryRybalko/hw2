@@ -1,0 +1,68 @@
+.message {
+  display: flex;
+  max-width: 585px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.imageAndText {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.imageAndText img {
+  width: 48px;
+  height: 48px;
+  order: 2;
+  margin-left: 20px;
+}
+
+.text {
+  background-color: #06c;
+  position: relative;
+  border-radius: 15px;
+  padding: 8px 13px;
+  margin-left: auto;
+}
+
+.text:before {
+  content: "";
+  top: 100%;
+  right: -35px;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-100%);
+  background-color: #06c;
+  -webkit-clip-path: polygon(0 55%, 0% 100%, 72% 100%);
+  clip-path: polygon(0 55%, 0% 100%, 72% 100%);
+  width: 57px;
+  height: 75px;
+}
+
+.name {
+  text-align: end;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.messageText {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.time {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: 15px;
+}
