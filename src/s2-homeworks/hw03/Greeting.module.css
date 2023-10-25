@@ -1,35 +1,80 @@
-.greetingForm {
-}
-
 .inputAndButtonContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .error {
+  color: #c00;
+  margin: 10px 0 10px;
 }
 
 .input {
-}
-
-.input:focus {
+  width: 372px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .errorInput {
+  color: #c00;
+  width: 372px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #c00;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .button {
+  height: 36px;
+  padding: 5px 24px;
+  border-radius: 3px;
+  background-color: #06c;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
 }
 
 .button:focus {
+  background-color: rgb(1, 70, 138);
 }
 
 .button:active {
+  background-color: rgb(1, 70, 138);
 }
 
 .button:disabled {
+  opacity: 0.5;
 }
 
 .text {
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .greeting {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
