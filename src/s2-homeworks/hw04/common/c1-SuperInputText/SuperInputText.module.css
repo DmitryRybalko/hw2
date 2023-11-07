@@ -1,20 +1,40 @@
-.input:focus {
-}
-
 .input {
+  width: 372px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .superInput {
+  outline: none;
 }
 
 .errorInput {
-}
-
-.errorInput:focus {
+  color: #c00;
+  width: 372px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #c00;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .error {
+  order: -1;
+  color: #c00;
+  margin: 0 0 10px 0;
 }
