@@ -1,29 +1,34 @@
-import React, { FC, ReactNode, useEffect, useState } from 'react'
-import { Header } from '../header/Header'
-import { Sidebar } from '../sidebar/Sidebar'
+import React, { FC, ReactNode, useEffect, useState } from "react";
+import { Header } from "../header/Header";
+import { Sidebar } from "../sidebar/Sidebar";
+import s from "../header/Header.module.css";
 
 type PropsType = {
-    children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const Layout: FC<PropsType> = ({ children }) => {
-    const [open, setOpen] = useState(false)
-    const handleClose = () => setOpen(false)
-    const handleOpen = () => setOpen(true)
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
 
-    useEffect(() => {
-        open && (document.body.style.overflow = 'hidden')
-        !open && (document.body.style.overflow = 'unset')
-    }, [open]) // отключает прокрутку при открытом меню
+  useEffect(() => {
+    open && (document.body.style.overflow = "hidden");
+    !open && (document.body.style.overflow = "unset");
+  }, [open]); // отключает прокрутку при открытом меню
 
-    return (
-        <>
-            <Sidebar open={open} handleClose={handleClose} />
-            <Header handleOpen={handleOpen} />
-            <div>
-                {/*страницы*/}
-                {children}
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className={s["header-row"]}>
+        <Header handleOpen={handleOpen} />
+      </div>
+
+      <Sidebar open={open} handleClose={handleClose} />
+
+      <div>
+        {/*страницы*/}
+        {children}
+      </div>
+    </>
+  );
+};

@@ -4,6 +4,7 @@
   max-width: 1420px;
   padding: 0 40px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .hw {
@@ -13,7 +14,6 @@
 }
 
 .hwTitle {
-  color: #000;
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-style: normal;
