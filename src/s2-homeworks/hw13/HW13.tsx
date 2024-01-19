@@ -46,18 +46,18 @@ const HW13 = () => {
       .catch((e) => {
         console.log(e);
         if (e.response.status === 400) {
-          setCode("Ошибка 500!");
-          setImage(error500);
-          setText("эмитация ошибки на сервере");
-          setInfo(
-            "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)"
-          );
-        } else if (e.response.status === 500) {
           setCode("Ошибка 400!");
           setImage(error400);
           setText("Ты не отправил success в body вообще!");
           setInfo(
             "ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!"
+          );
+        } else if (e.response.status === 500) {
+          setCode("Ошибка 500!");
+          setImage(error500);
+          setText("эмитация ошибки на сервере");
+          setInfo(
+            "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)"
           );
         } else {
           setCode("Error!");
@@ -66,7 +66,6 @@ const HW13 = () => {
           setInfo("AxiosError");
         }
       })
-
       .finally(() => {
         setDisable(false);
       });
@@ -88,20 +87,20 @@ const HW13 = () => {
             Send true
           </SuperButton>
           <SuperButton
-            id={"hw13-send-false"}
-            onClick={send(false)}
-            xType={"secondary"}
-            disabled={disable}
-          >
-            Send false
-          </SuperButton>
-          <SuperButton
             id={"hw13-send-undefined"}
             onClick={send(undefined)}
             xType={"secondary"}
             disabled={disable}
           >
             Send undefined
+          </SuperButton>
+          <SuperButton
+            id={"hw13-send-false"}
+            onClick={send(false)}
+            xType={"secondary"}
+            disabled={disable}
+          >
+            Send false
           </SuperButton>
           <SuperButton
             id={"hw13-send-null"}
